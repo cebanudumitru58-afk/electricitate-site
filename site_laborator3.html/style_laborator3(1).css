@@ -1,0 +1,286 @@
+/* Reset mic */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+/* Fundal + text */
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #070b16, #0b1220);
+  color: #eaf0ff;
+}
+
+/* Header */
+.header{
+  background: linear-gradient(90deg, #121c33, #0f1830);
+  border-bottom: 1px solid #2e3a5c;
+}
+.header-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo{
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(127,219,255,0.12);
+  border: 1px solid #2e3a5c;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  font-size: 22px;
+}
+.title h1{ margin: 0; font-size: 26px; }
+.title p{ margin: 2px 0 0 0; color: #b9c7ff; }
+
+/* Layout principal */
+.wrapper{
+  max-width: 1100px;
+  margin: 18px auto;
+  padding: 0 14px 22px 14px;
+  display: flex;
+  gap: 14px;
+}
+
+/* Sidebar */
+.sidebar{
+  width: 260px;
+  background: rgba(17,26,46,0.85);
+  border: 1px solid #2e3a5c;
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  position: sticky;
+  top: 14px;
+  height: fit-content;
+}
+.sidebar h2{
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+.badge{
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 12px;
+  background: rgba(255, 209, 102, 0.10);
+  border: 1px solid rgba(255, 209, 102, 0.35);
+  color: #ffe7b0;
+}
+
+/* Cuprins ca listă */
+.toc{
+  margin: 0;
+  padding-left: 18px;
+}
+.toc li{ margin: 6px 0; }
+
+/* PSEUDO-CLASE pentru link-uri (cerință) */
+a:link{ color: #7fdbff; text-decoration: none; }
+a:visited{ color: #b39dff; }
+a:hover{ color: #ffd166; text-decoration: underline; }
+a:active{ color: #ff6b6b; }
+
+/* Conținut */
+.content{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Card (efect vizual) */
+.card{
+  background: rgba(15,24,48,0.85);
+  border: 1px solid #2e3a5c;
+  border-radius: 16px;
+  padding: 14px 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.22);
+  transition: transform 0.20s ease, box-shadow 0.20s ease;
+}
+.card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.30);
+}
+.card h2{ margin: 0 0 8px 0; }
+.hint{ color: #b9c7ff; }
+
+/* Grid pentru noțiuni */
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+.box{
+  background: rgba(17,26,46,0.55);
+  border: 1px solid #2e3a5c;
+  border-radius: 14px;
+  padding: 10px;
+}
+.box h3{ margin: 0 0 6px 0; font-size: 16px; }
+
+.note{
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  background: rgba(127,219,255,0.10);
+  border: 1px solid rgba(127,219,255,0.35);
+}
+
+/* Liste */
+.list{ margin: 8px 0 0 18px; }
+.mono{
+  font-family: "Courier New", monospace;
+  background: rgba(255,255,255,0.08);
+  padding: 2px 6px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+/* Două coloane (istorie) */
+.two-col{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+.mini{
+  background: rgba(17,26,46,0.55);
+  border: 1px solid #2e3a5c;
+  border-radius: 14px;
+  padding: 10px;
+}
+
+/* “Tabel” făcut cu div-uri */
+.table-like{
+  margin-top: 10px;
+  border: 1px solid #2e3a5c;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.row{
+  display: grid;
+  grid-template-columns: 1.1fr 1.2fr 1.7fr;
+}
+.row .cell{
+  padding: 10px;
+  border-top: 1px solid #2e3a5c;
+}
+.row.head{
+  background: rgba(17,26,46,0.85);
+}
+.row.head .cell{
+  border-top: none;
+}
+.row:hover{
+  background: rgba(127,219,255,0.06);
+}
+
+/* Pills aplicații */
+.pill-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+.pill{
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid #2e3a5c;
+  background: rgba(17,26,46,0.55);
+}
+
+/* Warning (efect vizual) */
+.warning{
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  background: rgba(255, 107, 107, 0.10);
+  border: 1px solid rgba(255, 107, 107, 0.35);
+}
+
+/* Footer */
+.footer{
+  border-top: 1px solid #2e3a5c;
+  background: rgba(17,26,46,0.65);
+}
+.footer-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.small{ color: #b9c7ff; }
+.backtop{ margin-top: 10px; }
+
+/* Responsive */
+@media (max-width: 900px){
+  .wrapper{ flex-direction: column; }
+  .sidebar{ width: auto; position: static; }
+  .grid, .two-col{ grid-template-columns: 1fr; }
+  .row{ grid-template-columns: 1fr; }
+}
+
+/* Calculator electric - Laborator 3 */
+.calc-form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 12px;
+}
+.calc-form label{
+  color: #b9c7ff;
+  font-weight: bold;
+}
+.calc-form input{
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #2e3a5c;
+  background: rgba(17,26,46,0.85);
+  color: #eaf0ff;
+  outline: none;
+}
+.calc-form input:focus{
+  border-color: #7fdbff;
+  box-shadow: 0 0 10px rgba(127,219,255,0.25);
+}
+.calc-form button{
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #7fdbff;
+  color: #07101f;
+  font-weight: bold;
+  cursor: pointer;
+}
+.calc-form button:hover{
+  background: #ffd166;
+}
+.secondary-btn{
+  background: #b39dff !important;
+}
+.result-box{
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #2e3a5c;
+  background: rgba(17,26,46,0.55);
+}
+.result-box.success{
+  border-color: rgba(127,219,255,0.55);
+  background: rgba(127,219,255,0.10);
+}
+.result-box.error{
+  border-color: rgba(255,107,107,0.55);
+  background: rgba(255,107,107,0.10);
+}
+
+@media (max-width: 700px){
+  .calc-form{ grid-template-columns: 1fr; }
+}
